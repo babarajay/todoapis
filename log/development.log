@@ -1,0 +1,1681 @@
+  [1m[35m (2191.9ms)[0m  [1m[35mCREATE DATABASE "development" ENCODING = 'unicode'[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (733.9ms)[0m  [1m[35mCREATE DATABASE "test" ENCODING = 'unicode'[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (156.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (117.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770)[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DeviseCreateUsers (20190425102723)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (108.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying DEFAULT '' NOT NULL, "last_name" character varying DEFAULT '' NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190425102723_devise_create_users.rb:5
+  [1m[35m (62.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190425102723_devise_create_users.rb:41
+  [1m[35m (73.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190425102723_devise_create_users.rb:42
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190425102723"]]
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-25 10:29:31.282800"], ["updated_at", "2019-04-25 10:29:31.282800"]]
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/peaas/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (862.7ms)[0m  [1m[35mCREATE DATABASE "development" ENCODING = 'unicode'[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (484.0ms)[0m  [1m[35mCREATE DATABASE "test" ENCODING = 'unicode'[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (35.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (4.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770)[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to DeviseCreateUsers (20190425102723)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "first_name" character varying DEFAULT '' NOT NULL, "last_name" character varying DEFAULT '' NOT NULL, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190425102723_devise_create_users.rb:5
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190425102723_devise_create_users.rb:41
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190425102723_devise_create_users.rb:42
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190425102723"]]
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-28 07:43:44.186126"], ["updated_at", "2019-04-28 07:43:44.186126"]]
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started POST "/api/users/sign_up" for ::1 at 2019-04-28 13:39:47 +0530
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [POST] "/api/users/sign_up"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/users" for ::1 at 2019-04-28 13:40:54 +0530
+  
+ActionController::RoutingError (undefined method `protect_from_forgery' for ApplicationController:Class):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+Started POST "/api/users" for ::1 at 2019-04-28 13:41:21 +0530
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `authenticate_or_request_with_http_token' for #<Devise::RegistrationsController:0x00007fd799ff2148>):
+  
+app/controllers/application_controller.rb:15:in `authenticate_user'
+Started POST "/api/users" for ::1 at 2019-04-28 13:42:43 +0530
+  [1m[35m (27.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined method `before_filter' for ApplicationController:Class
+Did you mean?  before_action):
+  
+app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+Started POST "/api/users" for ::1 at 2019-04-28 13:42:55 +0530
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `require_token' for #<Devise::RegistrationsController:0x00007fbdd8a11600>
+Did you mean?  require):
+  
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.3) lib/active_support/callbacks.rb:199:in `block in halting'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/users" for ::1 at 2019-04-28 13:43:02 +0530
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant ApplicationController::JWT):
+  
+app/controllers/application_controller.rb:22:in `rescue in block in authenticate_user'
+app/controllers/application_controller.rb:18:in `block in authenticate_user'
+app/controllers/application_controller.rb:17:in `authenticate_user'
+Started POST "/api/users" for ::1 at 2019-04-28 13:44:32 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-04-28 13:45:38 +0530
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+Completed 500 Internal Server Error in 114ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `before' for #<Devise::RegistrationsController:0x00007fb2ceccd098>):
+  
+activesupport (5.2.3) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.3) lib/active_support/callbacks.rb:178:in `block (2 levels) in halting_and_conditional'
+activesupport (5.2.3) lib/active_support/callbacks.rb:178:in `all?'
+activesupport (5.2.3) lib/active_support/callbacks.rb:178:in `block in halting_and_conditional'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.3) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.3) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.3) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.3) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.3) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.3) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.3) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.3) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/users" for ::1 at 2019-04-28 13:46:01 +0530
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users" for ::1 at 2019-04-28 13:46:27 +0530
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (25.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ajay.babar@ymail.com"], ["LIMIT", 1]]
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (4.6ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ajay"], ["last_name", "Babar"], ["email", "ajay.babar@ymail.com"], ["encrypted_password", "$2a$11$sn4TCIhc6wjL1habAqLBKOE7NU5SpM.QROiO2inNrY5TtijGQpAF."], ["created_at", "2019-04-28 08:16:27.834950"], ["updated_at", "2019-04-28 08:16:27.834950"]]
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/create.json.jbuilder
+  Rendered users/_user.json.jbuilder (14.2ms)
+  Rendered devise/registrations/create.json.jbuilder (15.9ms)
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 56.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `generate_jwt' for #<User:0x00007fc76ff0b4f8>
+Did you mean?  generate_jwt_token):
+    1: json.(user, :id, :email, :first_name, :last_name)
+    2: json.token user.generate_jwt
+  
+app/views/users/_user.json.jbuilder:2:in `_app_views_users__user_json_jbuilder__3937517957009779297_70247276863240'
+app/views/devise/registrations/create.json.jbuilder:2:in `block in _app_views_devise_registrations_create_json_jbuilder__641384557878808652_70247276780900'
+app/views/devise/registrations/create.json.jbuilder:1:in `_app_views_devise_registrations_create_json_jbuilder__641384557878808652_70247276780900'
+Started POST "/api/users" for ::1 at 2019-04-28 13:47:16 +0530
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ajay.babar@ymail.com"], ["LIMIT", 1]]
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (15.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Completed 422 Unprocessable Entity in 219ms (Views: 0.4ms | ActiveRecord: 36.0ms)
+
+
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Destroy (19.9ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+Started POST "/api/users" for ::1 at 2019-04-28 13:47:40 +0530
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ajay.babar@ymail.com"], ["LIMIT", 1]]
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (25.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ajay"], ["last_name", "Babar"], ["email", "ajay.babar@ymail.com"], ["encrypted_password", "$2a$11$7pb.LbPjjOW/lvk5/6DdWuAq/BoPM.HH0w68HHX6/VSTAJaENZb.."], ["created_at", "2019-04-28 08:17:40.957261"], ["updated_at", "2019-04-28 08:17:40.957261"]]
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/create.json.jbuilder
+  Rendered users/_user.json.jbuilder (4.6ms)
+  Rendered devise/registrations/create.json.jbuilder (14.4ms)
+Completed 200 OK in 232ms (Views: 27.4ms | ActiveRecord: 33.3ms)
+
+
+Started POST "/api/users/login" for ::1 at 2019-04-28 13:49:26 +0530
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+Completed 422 Unprocessable Entity in 15ms (Views: 0.2ms | ActiveRecord: 11.9ms)
+
+
+Started POST "/api/users/login" for ::1 at 2019-04-28 13:49:55 +0530
+Processing by SessionsController#create as JSON
+  Parameters: {"email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]", "session"=>{"email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Completed 422 Unprocessable Entity in 31ms (Views: 0.2ms | ActiveRecord: 27.2ms)
+
+
+Started POST "/api/users/login" for ::1 at 2019-04-28 13:50:22 +0530
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ajay.babar@ymail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  Rendering devise/sessions/create.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.5ms)
+  Rendered devise/sessions/create.json.jbuilder (1.5ms)
+Completed 200 OK in 252ms (Views: 3.3ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/api/users" for ::1 at 2019-04-28 13:51:24 +0530
+Processing by Devise::RegistrationsController#create as JSON
+  Parameters: {"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar1@ymail.com", "password"=>"[FILTERED]"}, "registration"=>{"user"=>{"first_name"=>"Ajay", "last_name"=>"Babar", "email"=>"ajay.babar1@ymail.com", "password"=>"[FILTERED]"}}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ajay.babar1@ymail.com"], ["LIMIT", 1]]
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["first_name", "Ajay"], ["last_name", "Babar"], ["email", "ajay.babar1@ymail.com"], ["encrypted_password", "$2a$11$.OqabHDfma6OEwIDeibUCeTaAPY067jyRdqPQKKy6/OhxusD/K3qm"], ["created_at", "2019-04-28 08:21:24.707951"], ["updated_at", "2019-04-28 08:21:24.707951"]]
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/create.json.jbuilder
+  Rendered users/_user.json.jbuilder (0.3ms)
+  Rendered devise/registrations/create.json.jbuilder (1.2ms)
+Completed 200 OK in 202ms (Views: 3.4ms | ActiveRecord: 31.9ms)
+
+
+Started POST "/api/users/login" for ::1 at 2019-04-28 13:51:29 +0530
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ajay.babar@ymail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering devise/sessions/create.json.jbuilder
+  Rendered users/_user.json.jbuilder (1.1ms)
+  Rendered devise/sessions/create.json.jbuilder (2.2ms)
+Completed 200 OK in 151ms (Views: 3.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/api/user" for ::1 at 2019-04-28 13:52:56 +0530
+Processing by UsersController#show as JSON
+  Rendering users/show.json.jbuilder
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendered users/_user.json.jbuilder (0.4ms)
+  Rendered users/show.json.jbuilder (6.5ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/user" for ::1 at 2019-04-28 13:53:03 +0530
+Processing by UsersController#show as JSON
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/api/user" for ::1 at 2019-04-28 13:53:09 +0530
+Processing by UsersController#show as JSON
+  Rendering users/show.json.jbuilder
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendered users/_user.json.jbuilder (0.6ms)
+  Rendered users/show.json.jbuilder (7.9ms)
+Completed 200 OK in 11ms (Views: 4.6ms | ActiveRecord: 4.7ms)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770)[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateTodoLists (20190428084820)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (38.3ms)[0m  [1m[35mCREATE TABLE "todo_lists" ("id" bigserial primary key, "user_id" integer, "title" character varying, "description" text, "completed" boolean DEFAULT FALSE, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190428084820_create_todo_lists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190428084820"]]
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (3.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (20.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started POST "/api/todo_lists" for ::1 at 2019-04-28 14:26:37 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#create as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/todo_lists" for ::1 at 2019-04-28 14:27:07 +0530
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#create as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/api/users/login" for ::1 at 2019-04-28 14:27:20 +0530
+Processing by SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"email"=>"ajay.babar@ymail.com", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ajay.babar@ymail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3
+  Rendering devise/sessions/create.json.jbuilder
+  Rendered users/_user.json.jbuilder (1.0ms)
+  Rendered devise/sessions/create.json.jbuilder (6.5ms)
+Completed 200 OK in 216ms (Views: 12.7ms | ActiveRecord: 33.2ms)
+
+
+Started POST "/api/todo_lists" for ::1 at 2019-04-28 14:27:34 +0530
+Processing by TodoListsController#create as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_lists_controller.rb:17
+  [1m[36mTodoList Create (23.2ms)[0m  [1m[32mINSERT INTO "todo_lists" ("user_id", "title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["title", "This is first ToDoList"], ["description", "Test"], ["created_at", "2019-04-28 08:57:35.115311"], ["updated_at", "2019-04-28 08:57:35.115311"]]
+  ↳ app/controllers/todo_lists_controller.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_lists_controller.rb:17
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 64.0ms)
+
+
+  
+NoMethodError (undefined method `todo_list_url' for #<TodoListsController:0x00007f93248ca0c8>
+Did you mean?  todo_lists_url):
+  
+app/controllers/todo_lists_controller.rb:18:in `create'
+Started POST "/api/todo_lists" for ::1 at 2019-04-28 14:28:59 +0530
+Processing by TodoListsController#create as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_lists_controller.rb:17
+  [1m[36mTodoList Create (0.5ms)[0m  [1m[32mINSERT INTO "todo_lists" ("user_id", "title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["title", "This is first ToDoList"], ["description", "Test"], ["created_at", "2019-04-28 08:58:59.816177"], ["updated_at", "2019-04-28 08:58:59.816177"]]
+  ↳ app/controllers/todo_lists_controller.rb:17
+  [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_lists_controller.rb:17
+  Rendering todo_lists/show.json.jbuilder
+  Rendered todo_lists/_todo_list.json.jbuilder (246.1ms)
+  Rendered todo_lists/show.json.jbuilder (248.1ms)
+Completed 500 Internal Server Error in 384ms (ActiveRecord: 86.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_url' for #<#<Class:0x00007f9325995bf0>:0x00007f9325484120>
+Did you mean?  todo_lists_url):
+    1: json.extract! todo_list, :id, :title, :description, :completed, :created_at, :updated_at
+    2: json.url todo_list_url(todo_list, format: :json)
+  
+app/views/todo_lists/_todo_list.json.jbuilder:2:in `_app_views_todo_lists__todo_list_json_jbuilder__302463862037125097_70134983976380'
+app/views/todo_lists/show.json.jbuilder:1:in `_app_views_todo_lists_show_json_jbuilder__1324670851995834859_70134983930100'
+app/controllers/todo_lists_controller.rb:18:in `create'
+Started POST "/api/todo_lists" for ::1 at 2019-04-28 14:30:12 +0530
+Processing by TodoListsController#create as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_lists_controller.rb:17
+  [1m[36mTodoList Create (0.6ms)[0m  [1m[32mINSERT INTO "todo_lists" ("user_id", "title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["user_id", 2], ["title", "This is first ToDoList"], ["description", "Test"], ["created_at", "2019-04-28 09:00:12.250407"], ["updated_at", "2019-04-28 09:00:12.250407"]]
+  ↳ app/controllers/todo_lists_controller.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_lists_controller.rb:17
+  Rendering todo_lists/show.json.jbuilder
+  Rendered todo_lists/_todo_list.json.jbuilder (0.4ms)
+  Rendered todo_lists/show.json.jbuilder (1.7ms)
+Completed 201 Created in 19ms (Views: 11.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/todo_lists" for ::1 at 2019-04-28 14:30:30 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TodoList without an ID):
+  
+app/controllers/todo_lists_controller.rb:38:in `set_todo_list'
+Started GET "/api/todo_lists" for ::1 at 2019-04-28 14:31:32 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+Completed 404 Not Found in 85ms (ActiveRecord: 63.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TodoList without an ID):
+  
+app/controllers/todo_lists_controller.rb:41:in `set_todo_list'
+Started GET "/api/todo_lists" for ::1 at 2019-04-28 14:32:34 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+Completed 404 Not Found in 38ms (ActiveRecord: 20.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TodoList without an ID):
+  
+app/controllers/todo_lists_controller.rb:41:in `set_todo_list'
+Started GET "/api/todo_lists" for ::1 at 2019-04-28 14:34:18 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.7ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/todo_lists_controller.rb:10
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 0], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/index.json.jbuilder (5.3ms)
+Completed 200 OK in 105ms (Views: 10.7ms | ActiveRecord: 40.3ms)
+
+
+Started GET "/api/todo_lists/1" for ::1 at 2019-04-28 14:34:39 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}, "id"=>"1"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (3.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:41
+  Rendering todo_lists/show.json.jbuilder
+  Rendered todo_lists/_todo_list.json.jbuilder (0.9ms)
+  Rendered todo_lists/show.json.jbuilder (3.3ms)
+Completed 200 OK in 17ms (Views: 4.7ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/todo_lists/2" for ::1 at 2019-04-28 14:34:43 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}, "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (1.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:41
+  Rendering todo_lists/show.json.jbuilder
+  Rendered todo_lists/_todo_list.json.jbuilder (0.6ms)
+  Rendered todo_lists/show.json.jbuilder (2.2ms)
+Completed 200 OK in 10ms (Views: 3.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/todo_lists" for ::1 at 2019-04-28 14:34:49 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/todo_lists_controller.rb:10
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 0], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/index.json.jbuilder (1.5ms)
+Completed 200 OK in 9ms (Views: 2.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/todo_lists" for ::1 at 2019-04-28 14:35:17 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 0], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/index.json.jbuilder (1.8ms)
+Completed 200 OK in 43ms (Views: 3.1ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/api/todo_lists" for ::1 at 2019-04-28 14:35:25 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/index.json.jbuilder (31.0ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 19.7ms)
+
+
+  
+ActionView::Template::Error ({:partial=>"todo_lists/todo_list"} is not a symbol nor a string):
+    1: json.array! @todo_lists, partial: 'todo_lists/todo_list'
+  
+app/views/todo_lists/index.json.jbuilder:1:in `_app_views_todo_lists_index_json_jbuilder__124419218200032273_70224781539840'
+Started GET "/api/todo_lists" for ::1 at 2019-04-28 14:35:32 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (21.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (1.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/_todo_list.json.jbuilder (0.7ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.4ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.1ms)
+  Rendered todo_lists/index.json.jbuilder (8.4ms)
+Completed 200 OK in 35ms (Views: 9.5ms | ActiveRecord: 22.2ms)
+
+
+Started GET "/api/todo_lists" for ::1 at 2019-04-28 14:38:23 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (20.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 0], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/index.json.jbuilder (31.4ms)
+Completed 200 OK in 82ms (Views: 12.3ms | ActiveRecord: 51.0ms)
+
+
+Started GET "/api/todo_lists" for ::1 at 2019-04-28 14:40:04 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/_todo_list.json.jbuilder (0.5ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.1ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.0ms)
+  Rendered todo_lists/index.json.jbuilder (40.7ms)
+Completed 200 OK in 94ms (Views: 15.3ms | ActiveRecord: 55.7ms)
+
+
+Started GET "/api/todo_lists/1" for ::1 at 2019-04-28 14:40:08 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList", "description"=>"Test"}, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+  Rendering todo_lists/show.json.jbuilder
+  Rendered todo_lists/_todo_list.json.jbuilder (0.5ms)
+  Rendered todo_lists/show.json.jbuilder (1.9ms)
+Completed 200 OK in 9ms (Views: 3.1ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/api/todo_lists/1" for ::1 at 2019-04-28 14:40:22 +0530
+Processing by TodoListsController#update as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList - One", "description"=>"Test - 1"}, "id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_lists_controller.rb:23
+  [1m[36mTodoList Update (2.0ms)[0m  [1m[33mUPDATE "todo_lists" SET "title" = $1, "description" = $2, "updated_at" = $3 WHERE "todo_lists"."id" = $4[0m  [["title", "This is first ToDoList - One"], ["description", "Test - 1"], ["updated_at", "2019-04-28 09:10:22.969457"], ["id", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:23
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_lists_controller.rb:23
+  Rendering todo_lists/show.json.jbuilder
+  Rendered todo_lists/_todo_list.json.jbuilder (0.6ms)
+  Rendered todo_lists/show.json.jbuilder (2.0ms)
+Completed 200 OK in 18ms (Views: 3.5ms | ActiveRecord: 4.9ms)
+
+
+Started DELETE "/api/todo_lists/2" for ::1 at 2019-04-28 14:41:13 +0530
+Processing by TodoListsController#destroy as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList - One", "description"=>"Test - 1"}, "id"=>"2"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (1.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_lists_controller.rb:31
+  [1m[36mTodoList Destroy (0.4ms)[0m  [1m[31mDELETE FROM "todo_lists" WHERE "todo_lists"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/todo_lists_controller.rb:31
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_lists_controller.rb:31
+No template found for TodoListsController#destroy, rendering head :no_content
+Completed 204 No Content in 60ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/api/todo_lists/2" for ::1 at 2019-04-28 14:41:17 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList - One", "description"=>"Test - 1"}, "id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+Completed 404 Not Found in 6ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TodoList with 'id'=2 [WHERE "todo_lists"."user_id" = $1]):
+  
+app/controllers/todo_lists_controller.rb:36:in `set_todo_list'
+Started GET "/api/todo_lists/2" for ::1 at 2019-04-28 14:41:39 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList - One", "description"=>"Test - 1"}, "id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+Completed 404 Not Found in 49ms (ActiveRecord: 30.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TodoList with 'id'=2 [WHERE "todo_lists"."user_id" = $1]):
+  
+app/controllers/todo_lists_controller.rb:36:in `set_todo_list'
+Started GET "/api/todo_lists/2" for ::1 at 2019-04-28 14:42:09 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList - One", "description"=>"Test - 1"}, "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+Completed 404 Not Found in 40ms (ActiveRecord: 18.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find TodoList with 'id'=2 [WHERE "todo_lists"."user_id" = $1]):
+  
+app/controllers/todo_lists_controller.rb:36:in `set_todo_list'
+Started GET "/api/todo_lists/1/items" for ::1 at 2019-04-28 14:52:55 +0530
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6643483464595264770)[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Migrating to CreateTodoListItems (20190428091518)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (35.4ms)[0m  [1m[35mCREATE TABLE "todo_list_items" ("id" bigserial primary key, "todo_list_id" integer, "title" character varying, "completed" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190428091518_create_todo_list_items.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190428091518"]]
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (19.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(6643483464595264770)[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/rubies/ruby-2.6.0/lib/ruby/gems/2.6.0/gems/rake-12.3.2/lib/rake/task.rb:273
+Started GET "/api/todo_lists/1/items" for ::1 at 2019-04-28 14:53:13 +0530
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (No route matches [GET] "/api/todo_lists/1/items"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/api/todos/1/items" for ::1 at 2019-04-28 14:53:21 +0530
+Processing by TodoListItemsController#index as JSON
+  Parameters: {"todo_list"=>{"title"=>"This is first ToDoList - One", "description"=>"Test - 1"}, "todo_list_id"=>"1", "todo_list_item"=>{}}
+  [1m[36mTodoList Load (1.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:41
+  Rendering todo_list_items/index.json.jbuilder
+  [1m[36mTodoListItem Load (1.7ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_list_items/index.json.jbuilder:1
+  Rendered todo_list_items/index.json.jbuilder (18.8ms)
+Completed 200 OK in 86ms (Views: 23.0ms | ActiveRecord: 28.1ms)
+
+
+Started POST "/api/todos/1/items" for ::1 at 2019-04-28 14:53:42 +0530
+Processing by TodoListItemsController#create as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Eat"}, "todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:41
+  [1m[35m (23.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_list_items_controller.rb:15
+  [1m[36mTodoListItem Create (1.7ms)[0m  [1m[32mINSERT INTO "todo_list_items" ("todo_list_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["todo_list_id", 1], ["title", "Eat"], ["created_at", "2019-04-28 09:23:42.559108"], ["updated_at", "2019-04-28 09:23:42.559108"]]
+  ↳ app/controllers/todo_list_items_controller.rb:15
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_list_items_controller.rb:15
+  Rendering todo_list_items/show.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (280.3ms)
+  Rendered todo_list_items/show.json.jbuilder (281.9ms)
+Completed 500 Internal Server Error in 338ms (ActiveRecord: 27.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_list_item_url' for #<#<Class:0x00007fb6f2048e08>:0x00007fb6f206d4b0>
+Did you mean?  todo_list_url
+               todo_lists_url):
+    1: json.extract! todo_list_item, :id, :todo_list_id, :title, :completed, :created_at, :updated_at
+    2: json.url todo_list_item_url(todo_list_item, format: :json)
+  
+app/views/todo_list_items/_todo_list_item.json.jbuilder:2:in `_app_views_todo_list_items__todo_list_item_json_jbuilder__2189274463754527573_70211860671300'
+app/views/todo_list_items/show.json.jbuilder:1:in `_app_views_todo_list_items_show_json_jbuilder___1791090288159137892_70211860652220'
+app/controllers/todo_list_items_controller.rb:16:in `create'
+Started GET "/api/todos/1/items" for ::1 at 2019-04-28 14:54:12 +0530
+Processing by TodoListItemsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Eat"}, "todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:41
+  Rendering todo_list_items/index.json.jbuilder
+  [1m[36mTodoListItem Load (0.3ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_list_items/index.json.jbuilder:1
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.4ms)
+  Rendered todo_list_items/index.json.jbuilder (13.5ms)
+Completed 200 OK in 43ms (Views: 11.2ms | ActiveRecord: 14.2ms)
+
+
+Started POST "/api/todos/1/items" for ::1 at 2019-04-28 14:54:43 +0530
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TodoListItemsController#create as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep"}, "todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:41
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_list_items_controller.rb:15
+  [1m[36mTodoListItem Create (0.5ms)[0m  [1m[32mINSERT INTO "todo_list_items" ("todo_list_id", "title", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["todo_list_id", 1], ["title", "Sleep"], ["created_at", "2019-04-28 09:24:43.771870"], ["updated_at", "2019-04-28 09:24:43.771870"]]
+  ↳ app/controllers/todo_list_items_controller.rb:15
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_list_items_controller.rb:15
+  Rendering todo_list_items/show.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.4ms)
+  Rendered todo_list_items/show.json.jbuilder (1.5ms)
+Completed 201 Created in 99ms (Views: 2.9ms | ActiveRecord: 61.2ms)
+
+
+Started GET "/api/todos/1/items" for ::1 at 2019-04-28 14:54:47 +0530
+Processing by TodoListItemsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep"}, "todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.8ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:41
+  Rendering todo_list_items/index.json.jbuilder
+  [1m[36mTodoListItem Load (0.7ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_list_items/index.json.jbuilder:1
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.5ms)
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.1ms)
+  Rendered todo_list_items/index.json.jbuilder (5.7ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/todos/1/items/1" for ::1 at 2019-04-28 14:54:52 +0530
+Processing by TodoListItemsController#show as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep"}, "todo_list_id"=>"1", "id"=>"1"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:41
+  [1m[36mTodoListItem Load (0.4ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:36
+  Rendering todo_list_items/show.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.5ms)
+  Rendered todo_list_items/show.json.jbuilder (2.0ms)
+Completed 200 OK in 9ms (Views: 3.6ms | ActiveRecord: 0.9ms)
+
+
+Started PUT "/api/todos/1/items/1" for ::1 at 2019-04-28 14:55:04 +0530
+Processing by TodoListItemsController#update as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"1"}
+  [1m[36mTodoList Load (0.9ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:41
+  [1m[36mTodoListItem Load (1.2ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:36
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_list_items_controller.rb:23
+  [1m[36mTodoListItem Update (2.5ms)[0m  [1m[33mUPDATE "todo_list_items" SET "title" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["title", "Sleep - 1"], ["updated_at", "2019-04-28 09:25:04.422592"], ["id", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:23
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_list_items_controller.rb:23
+  Rendering todo_list_items/show.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.6ms)
+  Rendered todo_list_items/show.json.jbuilder (2.3ms)
+Completed 200 OK in 19ms (Views: 4.0ms | ActiveRecord: 7.9ms)
+
+
+Started DELETE "/api/todos/1/items/1" for ::1 at 2019-04-28 14:55:08 +0530
+Processing by TodoListItemsController#destroy as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"1"}
+  [1m[36mTodoList Load (1.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:41
+  [1m[36mTodoListItem Load (1.5ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todo_list_items_controller.rb:31
+  [1m[36mTodoListItem Destroy (1.0ms)[0m  [1m[31mDELETE FROM "todo_list_items" WHERE "todo_list_items"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:31
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todo_list_items_controller.rb:31
+No template found for TodoListItemsController#destroy, rendering head :no_content
+Completed 204 No Content in 64ms (ActiveRecord: 5.7ms)
+
+
+Started GET "/api/todos/1/items" for ::1 at 2019-04-28 15:00:39 +0530
+Processing by TodoListItemsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:45
+  Rendering todo_list_items/index.json.jbuilder
+  [1m[36mTodoListItem Load (0.4ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_list_items/index.json.jbuilder:1
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.3ms)
+  Rendered todo_list_items/index.json.jbuilder (37.4ms)
+Completed 200 OK in 81ms (Views: 11.1ms | ActiveRecord: 50.9ms)
+
+
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:00:51 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (1.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:45
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.4ms)
+
+
+  
+NoMethodError (undefined method `complete' for nil:NilClass):
+  
+app/controllers/todo_list_items_controller.rb:35:in `complete'
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:02:09 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:48
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 26.0ms)
+
+
+  
+NoMethodError (undefined method `complete' for nil:NilClass):
+  
+app/controllers/todo_list_items_controller.rb:35:in `complete'
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:03:37 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 25.2ms)
+
+
+  
+NoMethodError (undefined method `complete' for nil:NilClass):
+  
+app/controllers/todo_list_items_controller.rb:38:in `complete'
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:04:19 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 24.0ms)
+
+
+  
+NoMethodError (undefined method `complete' for nil:NilClass):
+  
+app/controllers/todo_list_items_controller.rb:38:in `complete'
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:04:53 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (1.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  [1m[36mTodoListItem Load (0.5ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:43
+  [1m[35m (18.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/todo_list_item.rb:7
+  [1m[36mTodoListItem Update (0.7ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", true], ["updated_at", "2019-04-28 09:34:53.688158"], ["id", 2]]
+  ↳ app/models/todo_list_item.rb:7
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/todo_list_item.rb:7
+No template found for TodoListItemsController#complete, rendering head :no_content
+Completed 204 No Content in 117ms (ActiveRecord: 49.7ms)
+
+
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:05:31 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  [1m[36mTodoListItem Load (1.4ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:43
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/todo_list_item.rb:7
+  [1m[35m (21.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/todo_list_item.rb:7
+  Rendering todo_list_items/complete.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.4ms)
+  Rendered todo_list_items/complete.json.jbuilder (1.9ms)
+Completed 200 OK in 34ms (Views: 3.3ms | ActiveRecord: 24.1ms)
+
+
+Started PUT "/api/todos/1" for ::1 at 2019-04-28 15:05:41 +0530
+Processing by TodoListsController#update as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "id"=>"1", "todo_list"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+Completed 400 Bad Request in 55ms (ActiveRecord: 34.6ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: todo_list):
+  
+app/controllers/todo_lists_controller.rb:41:in `todo_list_params'
+app/controllers/todo_lists_controller.rb:23:in `update'
+Started GET "/api/todos/1" for ::1 at 2019-04-28 15:05:54 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "id"=>"1", "todo_list"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+  Rendering todo_lists/show.json.jbuilder
+  Rendered todo_lists/_todo_list.json.jbuilder (0.4ms)
+  Rendered todo_lists/show.json.jbuilder (2.1ms)
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/todos/1/items" for ::1 at 2019-04-28 15:06:02 +0530
+Processing by TodoListItemsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  Rendering todo_list_items/index.json.jbuilder
+  [1m[36mTodoListItem Load (0.6ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_list_items/index.json.jbuilder:1
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.6ms)
+  Rendered todo_list_items/index.json.jbuilder (5.0ms)
+Completed 200 OK in 10ms (Views: 5.8ms | ActiveRecord: 1.0ms)
+
+
+Started PUT "/api/todos/1/items/1/complete" for ::1 at 2019-04-28 15:07:45 +0530
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"1"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  [1m[36mTodoListItem Load (0.5ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:43
+Filter chain halted as :set_todo_list_item rendered or redirected
+Completed 404 Not Found in 53ms (Views: 0.3ms | ActiveRecord: 16.5ms)
+
+
+Started PUT "/api/todos/2/items/1/complete" for ::1 at 2019-04-28 15:07:57 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"2", "id"=>"1"}
+  [1m[36mTodoList Load (1.6ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+Filter chain halted as :set_todo_list rendered or redirected
+Completed 404 Not Found in 4ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:08:05 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (0.9ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  [1m[36mTodoListItem Load (0.8ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/todo_list_item.rb:7
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/todo_list_item.rb:7
+  Rendering todo_list_items/complete.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.7ms)
+  Rendered todo_list_items/complete.json.jbuilder (5.7ms)
+Completed 200 OK in 62ms (Views: 11.3ms | ActiveRecord: 10.6ms)
+
+
+  [1m[36mTodoListItem Load (0.5ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" ORDER BY "todo_list_items"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodoList Load (25.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTodoListItem Update (0.7ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", false], ["updated_at", "2019-04-28 09:38:55.355328"], ["id", 2]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:09:06 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  [1m[36mTodoListItem Load (0.6ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:43
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/todo_list_item.rb:7
+  [1m[36mTodoListItem Update (0.7ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", true], ["updated_at", "2019-04-28 09:39:06.815670"], ["id", 2]]
+  ↳ app/models/todo_list_item.rb:7
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/todo_list_item.rb:7
+  Rendering todo_list_items/complete.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.6ms)
+  Rendered todo_list_items/complete.json.jbuilder (2.9ms)
+Completed 200 OK in 72ms (Views: 6.1ms | ActiveRecord: 24.8ms)
+
+
+  [1m[36mTodoListItem Load (0.5ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" ORDER BY "todo_list_items"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTodoListItem Load (3.1ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" ORDER BY "todo_list_items"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodoList Load (1.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTodoListItem Update (0.7ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", false], ["updated_at", "2019-04-28 09:41:57.690108"], ["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:12:04 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  [1m[36mTodoListItem Load (0.4ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/todo_list_item.rb:7
+  [1m[36mTodoListItem Update (22.1ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", true], ["updated_at", "2019-04-28 09:42:04.494371"], ["id", 2]]
+  ↳ app/models/todo_list_item.rb:7
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/todo_list_item.rb:7
+  Rendering todo_list_items/complete.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.4ms)
+  Rendered todo_list_items/complete.json.jbuilder (2.1ms)
+Completed 200 OK in 69ms (Views: 3.3ms | ActiveRecord: 34.1ms)
+
+
+  [1m[36mTodoListItem Load (8.1ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" ORDER BY "todo_list_items"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodoList Load (0.7ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTodoListItem Update (0.5ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", false], ["updated_at", "2019-04-28 09:42:30.240225"], ["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:13:04 +0530
+  [1m[35m (23.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (0.6ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  [1m[36mTodoListItem Load (0.6ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/todo_list_item.rb:7
+  [1m[36mTodoListItem Update (0.7ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", true], ["updated_at", "2019-04-28 09:43:04.591253"], ["id", 2]]
+  ↳ app/models/todo_list_item.rb:7
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/todo_list_item.rb:7
+  Rendering todo_list_items/complete.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.7ms)
+  Rendered todo_list_items/complete.json.jbuilder (5.8ms)
+Completed 200 OK in 92ms (Views: 11.9ms | ActiveRecord: 25.1ms)
+
+
+  [1m[36mTodoListItem Load (22.2ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" ORDER BY "todo_list_items"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (6.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodoList Load (0.8ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTodoListItem Update (1.1ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", false], ["updated_at", "2019-04-28 09:44:27.623397"], ["id", 2]]
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:14:33 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (22.8ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  [1m[36mTodoListItem Load (0.3ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:43
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/todo_list_item.rb:7
+  [1m[36mTodoListItem Update (22.7ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", true], ["updated_at", "2019-04-28 09:44:33.547450"], ["id", 2]]
+  ↳ app/models/todo_list_item.rb:7
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/models/todo_list_item.rb:7
+Completed 500 Internal Server Error in 107ms (ActiveRecord: 56.4ms)
+
+
+  
+NameError (undefined local variable or method `completed_changed' for #<TodoListItem:0x00007ff8d71ff5b8>
+Did you mean?  completed_changed?
+               completed_change):
+  
+app/models/todo_list_item.rb:13:in `update_todo_list'
+app/models/todo_list_item.rb:7:in `complete'
+app/controllers/todo_list_items_controller.rb:38:in `complete'
+  [1m[36mTodoListItem Load (0.9ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" ORDER BY "todo_list_items"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodoList Load (0.8ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTodoListItem Load (11.5ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" ORDER BY "todo_list_items"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodoList Load (21.8ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:15:03 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  [1m[36mTodoListItem Load (0.4ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:43
+  [1m[35m (19.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/todo_list_item.rb:7
+  [1m[36mTodoListItem Update (0.7ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", true], ["updated_at", "2019-04-28 09:45:04.073494"], ["id", 2]]
+  ↳ app/models/todo_list_item.rb:7
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/todo_list_item.rb:7
+  Rendering todo_list_items/complete.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (1.8ms)
+  Rendered todo_list_items/complete.json.jbuilder (4.5ms)
+Completed 200 OK in 97ms (Views: 5.8ms | ActiveRecord: 54.2ms)
+
+
+  [1m[36mTodoListItem Load (8.8ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" ORDER BY "todo_list_items"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTodoList Load (0.7ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTodoListItem Update (0.7ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", false], ["updated_at", "2019-04-28 09:46:08.876636"], ["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Started PUT "/api/todos/1/items/2/complete" for ::1 at 2019-04-28 15:16:20 +0530
+Processing by TodoListItemsController#complete as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list_id"=>"1", "id"=>"2"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:51
+  [1m[36mTodoListItem Load (0.4ms)[0m  [1m[34mSELECT  "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1 AND "todo_list_items"."id" = $2 LIMIT $3[0m  [["todo_list_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todo_list_items_controller.rb:43
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/todo_list_item.rb:7
+  [1m[36mTodoListItem Update (0.5ms)[0m  [1m[33mUPDATE "todo_list_items" SET "completed" = $1, "updated_at" = $2 WHERE "todo_list_items"."id" = $3[0m  [["completed", true], ["updated_at", "2019-04-28 09:46:20.641182"], ["id", 2]]
+  ↳ app/models/todo_list_item.rb:7
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/todo_list_item.rb:7
+  Rendering todo_list_items/complete.json.jbuilder
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.6ms)
+  Rendered todo_list_items/complete.json.jbuilder (2.0ms)
+Completed 200 OK in 60ms (Views: 3.3ms | ActiveRecord: 28.2ms)
+
+
+Started GET "/api/todos/1" for ::1 at 2019-04-28 15:16:33 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "id"=>"1", "todo_list"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+  Rendering todo_lists/show.json.jbuilder
+  Rendered todo_lists/_todo_list.json.jbuilder (0.5ms)
+  Rendered todo_lists/show.json.jbuilder (2.5ms)
+Completed 200 OK in 59ms (Views: 4.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/api/todos/1" for ::1 at 2019-04-28 15:18:05 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "id"=>"1", "todo_list"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (0.6ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+  Rendering todo_lists/show.json.jbuilder
+  [1m[36mTodoListItem Load (0.3ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_lists/_todo_list.json.jbuilder:2
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (559.7ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (579.5ms)
+  Rendered todo_lists/show.json.jbuilder (580.5ms)
+Completed 500 Internal Server Error in 640ms (ActiveRecord: 52.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `todo_list_item' for #<#<Class:0x00007ff8d71ccb40>:0x00007ff8d71d6910>
+Did you mean?  todo_list_items
+               todo_list_path
+               todo_list_url):
+    1: json.extract! todo_list_item, :id, :todo_list_id, :title, :completed
+  
+app/views/todo_list_items/_todo_list_item.json.jbuilder:1:in `_app_views_todo_list_items__todo_list_item_json_jbuilder__524547588048188025_70353368883220'
+app/views/todo_lists/_todo_list.json.jbuilder:2:in `_app_views_todo_lists__todo_list_json_jbuilder__1804138972933900965_70353368838200'
+app/views/todo_lists/show.json.jbuilder:1:in `_app_views_todo_lists_show_json_jbuilder___1834524202837939058_70353368803860'
+Started GET "/api/todos/1" for ::1 at 2019-04-28 15:19:07 +0530
+Processing by TodoListsController#show as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "id"=>"1", "todo_list"=>{}}
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  [1m[36mTodoList Load (6.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 AND "todo_lists"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:36
+  Rendering todo_lists/show.json.jbuilder
+  [1m[36mTodoListItem Load (22.0ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" = $1[0m  [["todo_list_id", 1]]
+  ↳ app/views/todo_lists/_todo_list.json.jbuilder:2
+  Rendered todo_list_items/_todo_list_item.json.jbuilder (0.4ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (25.9ms)
+  Rendered todo_lists/show.json.jbuilder (27.1ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 35.3ms)
+
+
+  
+ActionView::Template::Error (Can't merge [{"id"=>2, "todo_list_id"=>1, "title"=>"Sleep", "completed"=>true}] into {"id"=>1, "title"=>"This is first ToDoList - One", "description"=>"Test - 1", "completed"=>false}):
+    1: json.extract! todo_list, :id, :title, :description, :completed
+    2: json.array! todo_list.todo_list_items, partial: 'todo_list_items/todo_list_item', as: :todo_list_item
+  
+app/views/todo_lists/_todo_list.json.jbuilder:2:in `_app_views_todo_lists__todo_list_json_jbuilder__1804138972933900965_70353347003040'
+app/views/todo_lists/show.json.jbuilder:1:in `_app_views_todo_lists_show_json_jbuilder___1834524202837939058_70353346992080'
+Started GET "/api/todos" for ::1 at 2019-04-28 15:19:18 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (19.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  [1m[36mTodoListItem Load (0.8ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/_todo_list.json.jbuilder (2.4ms)
+  Rendered todo_lists/index.json.jbuilder (22.4ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 20.9ms)
+
+
+  
+ActionView::Template::Error (Can't merge [] into {"id"=>3, "title"=>"This is first ToDoList", "description"=>"Test", "completed"=>false}):
+    1: json.extract! todo_list, :id, :title, :description, :completed
+    2: json.array! todo_list.todo_list_items, partial: 'todo_list_items/todo_list_item', as: :todo_list_item
+  
+app/views/todo_lists/_todo_list.json.jbuilder:2:in `_app_views_todo_lists__todo_list_json_jbuilder__1804138972933900965_70353347251340'
+app/views/todo_lists/index.json.jbuilder:1:in `_app_views_todo_lists_index_json_jbuilder___3226934103515759998_70353347199800'
+Started GET "/api/todos" for ::1 at 2019-04-28 15:19:32 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.9ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  [1m[36mTodoListItem Load (0.9ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/_todo_list.json.jbuilder (2.3ms)
+  Rendered todo_lists/index.json.jbuilder (8.8ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (Can't merge [] into {"id"=>3, "title"=>"This is first ToDoList", "description"=>"Test", "completed"=>false}):
+    1: json.extract! todo_list, :id, :title, :description, :completed
+    2: json.array! todo_list.todo_list_items, partial: 'todo_list_items/todo_list_item', as: :todo_list_items
+  
+app/views/todo_lists/_todo_list.json.jbuilder:2:in `_app_views_todo_lists__todo_list_json_jbuilder__1804138972933900965_70353345869840'
+app/views/todo_lists/index.json.jbuilder:1:in `_app_views_todo_lists_index_json_jbuilder___3226934103515759998_70353344314920'
+Started GET "/api/todos" for ::1 at 2019-04-28 15:22:08 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.7ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  [1m[36mTodoListItem Load (10.4ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/_todo_list.json.jbuilder (0.6ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.2ms)
+  Rendered todo_lists/index.json.jbuilder (16.7ms)
+Completed 200 OK in 23ms (Views: 7.6ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-28 15:25:42 +0530
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  [1m[36mTodoListItem Load (1.2ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/_todo_list.json.jbuilder (0.5ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.3ms)
+  Rendered todo_lists/index.json.jbuilder (42.8ms)
+Completed 200 OK in 90ms (Views: 40.7ms | ActiveRecord: 29.0ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-28 15:26:50 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.8ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  [1m[36mTodoListItem Load (0.5ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/_todo_list.json.jbuilder (0.5ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.1ms)
+  Rendered todo_lists/index.json.jbuilder (47.2ms)
+Completed 200 OK in 90ms (Views: 26.0ms | ActiveRecord: 48.4ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-28 15:27:20 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (19.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  [1m[36mTodoListItem Load (0.7ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:1
+  Rendered todo_lists/_todo_list.json.jbuilder (0.7ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.2ms)
+  Rendered todo_lists/index.json.jbuilder (54.5ms)
+Completed 500 Internal Server Error in 100ms (ActiveRecord: 52.6ms)
+
+
+  
+ActionView::Template::Error (Failed to add "page" property to an array):
+    1: json.array! @todo_lists, partial: 'todo_lists/todo_list', as: :todo_list
+    2: json.page @page
+    3: json.size @size
+  
+app/views/todo_lists/index.json.jbuilder:2:in `_app_views_todo_lists_index_json_jbuilder___1878044308550239634_70193277800440'
+Started GET "/api/todos" for ::1 at 2019-04-28 15:28:44 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (16.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.6ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  [1m[36mTodoListItem Load (0.4ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  Rendered todo_lists/_todo_list.json.jbuilder (0.7ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.2ms)
+  Rendered todo_lists/index.json.jbuilder (6.8ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 17.2ms)
+
+
+  
+ActionView::Template::Error (Can't merge [{"id"=>3, "title"=>"This is first ToDoList", "description"=>"Test", "list_items"=>[]}, {"id"=>1, "title"=>"This is first ToDoList - One", "description"=>"Test - 1", "list_items"=>[{"id"=>2, "title"=>"Sleep", "completed"=>true}]}] into {"page"=>1, "size"=>10}):
+    1: json.page @page
+    2: json.size @size
+    3: 
+    4: json.array! @todo_lists, partial: 'todo_lists/todo_list', as: :todo_list
+  
+app/views/todo_lists/index.json.jbuilder:4:in `_app_views_todo_lists_index_json_jbuilder___1878044308550239634_70193278092460'
+Started GET "/api/todos" for ::1 at 2019-04-28 15:39:02 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  [1m[36mTodoListItem Load (1.9ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  Rendered todo_lists/index.json.jbuilder (6.0ms)
+Completed 200 OK in 11ms (Views: 4.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-28 15:39:30 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.7ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  [1m[36mTodoListItem Load (0.5ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  Rendered todo_lists/index.json.jbuilder (48.1ms)
+Completed 200 OK in 72ms (Views: 40.9ms | ActiveRecord: 41.2ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-28 15:39:49 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (19.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  Rendered todo_lists/index.json.jbuilder (0.6ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 19.8ms)
+
+
+  
+SyntaxError (/Users/ajay/Documents/workspace/ruby/todoapis/app/views/todo_lists/index.json.jbuilder:5: syntax error, unexpected ':', expecting end
+  partial: 'todo_lists/todo_list', todo...
+         ^
+/Users/ajay/Documents/workspace/ruby/todoapis/app/views/todo_lists/index.json.jbuilder:5: syntax error, unexpected ',', expecting end
+...artial: 'todo_lists/todo_list', todo_list: todo_list
+...                              ^
+/Users/ajay/Documents/workspace/ruby/todoapis/app/views/todo_lists/index.json.jbuilder:11: syntax error, unexpected ensure, expecting end-of-input
+          ensure
+          ^~~~~~):
+  
+app/views/todo_lists/index.json.jbuilder:5: syntax error, unexpected ':', expecting end
+app/views/todo_lists/index.json.jbuilder:5: syntax error, unexpected ',', expecting end
+app/views/todo_lists/index.json.jbuilder:11: syntax error, unexpected ensure, expecting end-of-input
+Started GET "/api/todos" for ::1 at 2019-04-28 15:41:12 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  [1m[36mTodoListItem Load (0.4ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  Rendered todo_lists/_todo_list.json.jbuilder (0.7ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.2ms)
+  Rendered todo_lists/index.json.jbuilder (6.9ms)
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-28 15:41:27 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (21.6ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  [1m[36mTodoListItem Load (0.4ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  Rendered todo_lists/_todo_list.json.jbuilder (0.5ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.1ms)
+  Rendered todo_lists/index.json.jbuilder (54.1ms)
+Completed 200 OK in 107ms (Views: 25.8ms | ActiveRecord: 57.3ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-28 15:41:32 +0530
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (6.0ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  [1m[36mTodoListItem Load (2.0ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  Rendered todo_lists/_todo_list.json.jbuilder (0.6ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.2ms)
+  Rendered todo_lists/index.json.jbuilder (14.7ms)
+Completed 200 OK in 20ms (Views: 8.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/api/todos" for ::1 at 2019-04-28 15:41:54 +0530
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/ajay/.rvm/gems/ruby-2.6.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#index as JSON
+  Parameters: {"todo_list_item"=>{"title"=>"Sleep - 1"}, "todo_list"=>{}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:34
+  Rendering todo_lists/index.json.jbuilder
+  [1m[36mTodoList Load (0.5ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."user_id" = $1 LIMIT $2 OFFSET $3[0m  [["user_id", 2], ["LIMIT", 10], ["OFFSET", 0]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  [1m[36mTodoListItem Load (2.6ms)[0m  [1m[34mSELECT "todo_list_items".* FROM "todo_list_items" WHERE "todo_list_items"."todo_list_id" IN ($1, $2)[0m  [["todo_list_id", 3], ["todo_list_id", 1]]
+  ↳ app/views/todo_lists/index.json.jbuilder:4
+  Rendered todo_lists/_todo_list.json.jbuilder (0.9ms)
+  Rendered todo_lists/_todo_list.json.jbuilder (0.5ms)
+  Rendered todo_lists/index.json.jbuilder (76.1ms)
+Completed 200 OK in 124ms (Views: 45.2ms | ActiveRecord: 65.9ms)
+
+
