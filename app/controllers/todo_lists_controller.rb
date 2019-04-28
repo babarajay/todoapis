@@ -15,6 +15,7 @@ class TodoListsController < ApplicationController
     @todo_list = current_user.todo_lists.new(todo_list_params)
 
     if @todo_list.save
+      @message = "Todo List saved successfully."
       render :show, status: :created
     else
       render json: @todo_list.errors, status: :unprocessable_entity
